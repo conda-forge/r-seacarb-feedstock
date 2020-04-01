@@ -1,4 +1,4 @@
-{% set version = "3.2.12" %}
+{% set version = "3.2.13" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -11,12 +11,12 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/seacarb_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/seacarb/seacarb_{{ version }}.tar.gz
-  sha256: 7a258fd246624e510c5fc1284a9ac39285ac9ea20a72ba1cb71bf18b85aa67bd
+  sha256: 364c617d7d166f9e10a3597fcbece9ad487e8276f8abf1bbc081f42bc097162a
 
 build:
   noarch: generic
-  merge_build_host: True  # [win]
-  number: 1
+  merge_build_host: true  # [win]
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
@@ -41,10 +41,9 @@ test:
 about:
   home: https://CRAN.R-project.org/package=seacarb
   license: GPL (>= 2)
-  summary: Calculates parameters of the seawater carbonate system and assists the design of ocean
-    acidification perturbation experiments.
+  summary: Calculates parameters of the seawater carbonate system and assists the design of ocean acidification perturbation experiments.
   license_family: GPL3
-  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
+  license_file: {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
 
 extra:
   recipe-maintainers:
