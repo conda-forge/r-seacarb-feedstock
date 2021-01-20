@@ -7,16 +7,15 @@ package:
   version: {{ version|replace("-", "_") }}
 
 source:
-  fn: seacarb_{{ version }}.tar.gz
   url:
     - {{ cran_mirror }}/src/contrib/seacarb_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/seacarb/seacarb_{{ version }}.tar.gz
   sha256: 478dded9add08d0485f547e091636040a3c958e3f1fdbe27721e3973552ade71
 
 build:
-  noarch: generic
   merge_build_host: true  # [win]
   number: 0
+  noarch: generic
   rpaths:
     - lib/R/lib/
     - lib/
@@ -40,17 +39,12 @@ test:
 
 about:
   home: https://CRAN.R-project.org/package=seacarb
-  license: GPL (>= 2)
+  license: GPL-2.0-or-later
   summary: Calculates parameters of the seawater carbonate system and assists the design of ocean acidification perturbation experiments.
   license_family: GPL3
-  license_file: {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
+  license_file:
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
 
 extra:
   recipe-maintainers:
     - conda-forge/r
-    - johanneskoester
-    - bgruening
-    - daler
-    - jdblischak
-    - cbrueffer
-    - dbast
