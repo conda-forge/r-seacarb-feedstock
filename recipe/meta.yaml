@@ -1,4 +1,4 @@
-{% set version = "3.3.0" %}
+{% set version = "3.3.1" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/seacarb_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/seacarb/seacarb_{{ version }}.tar.gz
-  sha256: 3696a852b74f932bac8c205f8e0a4a806f8ec83d2f613f539f49c8a1423188df
+  sha256: c3ab5682a1630952fdcdd0d8cb07a03f497b7fe792d56086ab8fdc5c3123ff39
 
 build:
   merge_build_host: true  # [win]
