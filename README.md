@@ -1,11 +1,11 @@
-About r-seacarb
-===============
+About r-seacarb-feedstock
+=========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-seacarb-feedstock/blob/main/LICENSE.txt)
 
 Home: https://CRAN.R-project.org/package=seacarb
 
 Package license: GPL-2.0-or-later
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-seacarb-feedstock/blob/main/LICENSE.txt)
 
 Summary: Calculates parameters of the seawater carbonate system and assists the design of ocean acidification perturbation experiments.
 
