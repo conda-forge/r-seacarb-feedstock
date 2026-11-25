@@ -1,4 +1,4 @@
-{% set version = "3.4.2" %}
+{% set version = "3.4.3" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,7 +9,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/seacarb_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/seacarb/seacarb_{{ version }}.tar.gz
-  sha256: a1f9d069761b462dcd921c032130796dbdf38c1206cac58184de72a930d9a84e
+  sha256: 2ebb73de727f1caa582c3d6f53f69983d15f599be5f9595a30ff43dabb0ff5e4
 
 build:
   number: 0
